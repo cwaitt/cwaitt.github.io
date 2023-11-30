@@ -8,10 +8,10 @@
       "icon": "<i class='fa fa-github fa-fw fa-2x'></i>"
     },
     {
-      "name": "Moldesc",
-      "link": "https://github.com/cwaitt/MolDesc",
-      "image": "",
-      "description": "A python package to evaluate simple descriptors of molecules such as volume.",
+      "name": "QWavE",
+      "link": "https://github.com/cwaitt/QWavE",
+      "image": "./img/projects/QWavE.png",
+      "description": "A Python package to numerically evaluate the Schrödinger Equation and evaluate thermodynamic properties.",
       "type": "type2",
       "icon": "<i class='fa fa-github fa-fw fa-2x'></i>"
     }
