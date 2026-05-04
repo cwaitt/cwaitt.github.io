@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,166 +25,375 @@
   <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- jQuery UI css -->
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-  <!-- Google font: Open Sans Pro -->
+  <!-- Google font: Open Sans -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- FontAwesome icon include -->
+  <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/b730292a05.js" crossorigin="anonymous"></script>
 
   <!-- Main local styles -->
   <link rel="stylesheet" href="css/main.css">
 
-  <title>Craig Waitt</title>
-
+  <title>Projects and Resources | Craig Waitt, Ph.D.</title>
 </head>
 
 <body id="top">
 
-  <!-- navbar include -->
+  <!-- Navbar include -->
   <div id="page-navbar"></div>
 
-  <!-- main wrapper div -->
-  <div class="container px-4" id="wrapper">
+  <main class="container min-vh-100" id="wrapper">
 
-    <div class="row mx-3">
-      <div class="col-sm-12">
-        <h1>Projects</h1>
-        <p>Here, you will find the links to various open source projects that I have worked on.
-          For questions or comments regarding anything of these projects please reach out to me
-          <a href="mailto:waitt.craig@gmail.com">here</a>.
-        </p>
-      </div>
-      <!-- col-sm-12 -->
+    <div class="row">
 
-      <div class="col-sm-10 offset-sm-1">
-        <form id="search-box">
-          <div class="form-group">
-            <div class="input-group border-0">
-              <div class="input-group-prepend">
-                <span class="input-group-text border-0"><i class="fa fa-search fa-fw fa-2x graphite"></i></span>
-              </div>
-              <input type="text" class="form-control form-control-lg" aria-label="" name="brainstorm-search" id="search-input" placeholder="Search projects">
-              <div class="input-group-append" id="search-refresh-button">
-                <span class="input-group-text border-0"><i class="fa fa-sync-alt opacity-half bright-blue fa-fw fa-2x pointer sm-del"></i></span>
-              </div>
-            </div>
+      <!-- Sidebar -->
+      <aside class="col-sm-4 mb-4 mb-sm-0">
+
+        <div class="profile-card">
+          <div class="text-center">
+            <img id="my-photo"
+                 src="./img/personal_img/headshot.jpg"
+                 class="rounded img-fluid shadow-sm"
+                 width="100%"
+                 alt="Craig Waitt">
           </div>
-        </form>
-      </div>
-      <!-- .col-sm-8 -->
 
-      <div class="col-sm-10 offset-sm-1 text-center" id="filter-buttons">
+          <table class="table mt-4" id="contact-table">
+            <tbody>
+              <tr class="d-flex">
+                <td class="col-2 contact-icon">
+                  <i class="fa fa-fw fa-lg fa-home" aria-hidden="true"></i>
+                </td>
+                <td class="col-10">
+                  373 Best Hall<br>
+                  Trine University<br>
+                  Angola, IN 46703
+                </td>
+              </tr>
 
-        <!-- Filter buttons -->
-        <button id="all" class="btn btn-sm btn-primary mr-3 active">
-          All
-        </button>
-        <button id="type1" class="btn btn-sm btn-primary mr-3">
-          Workshops
-        </button>
-        <button id="type2" class="btn btn-sm btn-primary mr-3">
-          Python Tools
-        </button>
+              <tr class="d-flex">
+                <td class="col-2 contact-icon">
+                  <i class="fa fa-lg fa-at" aria-hidden="true"></i>
+                </td>
+                <td class="col-10">
+                  <a href="mailto:waittc@trine.edu">waittc@trine.edu</a>
+                </td>
+              </tr>
 
+              <tr class="d-flex">
+                <td class="col-2 contact-icon">
+                  <i class="fab fa-github fa-lg" aria-hidden="true"></i>
+                </td>
+                <td class="col-10">
+                  <a href="https://github.com/cwaitt" target="_blank" rel="noopener">GitHub</a>
+                </td>
+              </tr>
 
-      </div>
-      <!-- col-sm-10 -->
-    </div>
-    <!-- .row -->
+              <tr class="d-flex">
+                <td class="col-2 contact-icon">
+                  <i class="fab fa-orcid fa-lg" aria-hidden="true"></i>
+                </td>
+                <td class="col-10">
+                  <a href="https://orcid.org/0000-0003-4189-4103" target="_blank" rel="noopener">ORCID</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-    <div class="row" id="projects-div">
+      </aside>
 
-      <!-- Write the cards into the page -->
-      <script id="all-the-projects" type="text/template">
+      <!-- Main content -->
+      <section class="col-sm-8 px-4">
 
-        {{#projects}}
-          <div class="card-container col-sm-12 col-md-6 col-lg-4 col-xl-4">
-            <div class="card shadow-sm {{{type}}}" data-url="{{{link}}}">
-              <img src="{{{image}}}" class="card-img-top" alt="...">
-              <div class="card-body border-top" data-resource-type="{{{type}}}">
-                <p class="text-center card-action"><span>{{{icon}}}</span></p>
-                <h5 class="project-title">{{name}}</h5>
-                {{description}}
+        <header class="page-header">
+          <h1>Projects and Resources</h1>
+
+          <p class="lead">
+            This page collects research projects, teaching materials, workshops, coding resources,
+            and student-facing project archives.
+          </p>
+
+          <p>
+            Some items are polished resources, while others are active or developing projects.
+            The goal is to make useful materials easier to find for students, collaborators,
+            and anyone interested in chemistry, computation, data science, and undergraduate
+            research.
+          </p>
+        </header>
+
+        <section class="homepage-section" aria-labelledby="featured-projects-heading">
+          <h2 id="featured-projects-heading">Featured Projects</h2>
+
+          <div class="project-card-grid">
+
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-badge research-badge">Cheminformatics</span>
+                <span class="project-status active-status">Active</span>
               </div>
-            </div>
+
+              <h3>Molecular Structure to Flavor</h3>
+
+              <p>
+                A cheminformatics project focused on connecting molecular structure to reported
+                flavor or taste labels. This project uses molecular datasets, SMILES strings,
+                RDKit descriptors, functional group analysis, and interpretable machine learning
+                workflows.
+              </p>
+
+              <p>
+                The long-term goal is to help students explore how chemical structure relates to
+                sensory properties such as sweet, bitter, sour, salty, umami, and other flavor
+                descriptors.
+              </p>
+
+              <a class="btn btn-outline-primary btn-sm disabled" href="#" aria-disabled="true">
+                In Development
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-badge research-badge">Bioinformatics</span>
+                <span class="project-status development-status">In Development</span>
+              </div>
+
+              <h3>Molecular Structure to Flavor Receptor Triggering</h3>
+
+              <p>
+                A developing bioinformatics direction focused on how molecular structure may
+                relate to the activation of taste or flavor-related receptors.
+              </p>
+
+              <p>
+                This project is intended to create a biology-friendly entry point into coding,
+                molecular datasets, receptor information, sequence or structure data, and
+                structure-function relationships.
+              </p>
+
+              <a class="btn btn-outline-primary btn-sm disabled" href="#" aria-disabled="true">
+                In Development
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-badge teaching-badge">Student Work</span>
+                <span class="project-status future-status">Future Archive</span>
+              </div>
+
+              <h3>Undergraduate Project Archive</h3>
+
+              <p>
+                A future space for completed student research projects, posters, presentations,
+                code repositories, and project summaries.
+              </p>
+
+              <p>
+                This section can grow as students complete computational chemistry,
+                cheminformatics, bioinformatics, or data science projects.
+              </p>
+
+              <a class="btn btn-outline-primary btn-sm disabled" href="#" aria-disabled="true">
+                Future Archive
+              </a>
+            </article>
+
           </div>
-        {{/projects}}
-      </script>
+        </section>
+
+        <section class="homepage-section" aria-labelledby="workshops-heading">
+          <h2 id="workshops-heading">Workshops and Teaching Materials</h2>
+
+          <div class="project-card-grid">
+
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-badge workshop-badge">Workshop</span>
+                <span class="project-status available-status">Available</span>
+              </div>
+
+              <h3>LaTeX and Overleaf Workshop</h3>
+
+              <p>
+                Introductory workshop materials for students learning LaTeX, Overleaf, document
+                structure, mathematical equations, figures, tables, citations, and scientific
+                writing.
+              </p>
+
+              <p>
+                This workshop grew out of my work as a Navari Family Center for Digital
+                Scholarship Fellow at the University of Notre Dame.
+              </p>
+
+              <a class="btn btn-outline-primary btn-sm disabled" href="#" aria-disabled="true">
+                Add Link
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-badge teaching-badge">Teaching Resource</span>
+                <span class="project-status development-status">In Development</span>
+              </div>
+
+              <h3>Scientific Computing Resources</h3>
+
+              <p>
+                Notes and tutorials for students beginning to use Python, spreadsheets, data
+                visualization, Git, and reproducible workflows in chemistry.
+              </p>
+
+              <p>
+                These resources are intended to support coursework and undergraduate research
+                onboarding.
+              </p>
+
+              <a class="btn btn-outline-primary btn-sm disabled" href="#" aria-disabled="true">
+                Coming Soon
+              </a>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-badge teaching-badge">Teaching Resource</span>
+                <span class="project-status development-status">In Development</span>
+              </div>
+
+              <h3>Research Onboarding Materials</h3>
+
+              <p>
+                Practical materials for students joining computational chemistry, cheminformatics,
+                bioinformatics, or scientific computing projects.
+              </p>
+
+              <p>
+                Possible topics include reading papers, using GitHub, setting up Python,
+                organizing research notes, and preparing presentations.
+              </p>
+
+              <a class="btn btn-outline-primary btn-sm disabled" href="#" aria-disabled="true">
+                Coming Soon
+              </a>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="homepage-section" aria-labelledby="computational-projects-heading">
+          <h2 id="computational-projects-heading">Computational Chemistry and Research Tools</h2>
+
+          <div class="project-card-grid">
+
+            <article class="project-card">
+              <div class="project-card-header">
+                <span class="project-badge coding-badge">Resource Hub</span>
+                <span class="project-status development-status">In Development</span>
+              </div>
+
+              <h3>Computational Chemistry Resource Hub</h3>
+
+              <p>
+                A planned GitHub repository that will collect links to external software,
+                tutorials, installation instructions, example workflows, and research computing
+                resources for students.
+              </p>
+
+              <p>
+                The goal is to give students a single starting point for finding tools such as
+                molecular visualization programs, quantum chemistry software, Python packages,
+                cheminformatics resources, and high-performance or high-throughput computing
+                documentation.
+              </p>
+
+              <a class="btn btn-outline-primary btn-sm disabled" href="#" aria-disabled="true">
+                GitHub Repo in Development
+              </a>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="homepage-section" aria-labelledby="status-key-heading">
+          <h2 id="status-key-heading">Project Status Key</h2>
+
+          <div class="status-key-grid">
+
+            <div class="status-key-item">
+              <span class="project-status available-status">Available</span>
+              <p>Resource is ready to use or link publicly.</p>
+            </div>
+
+            <div class="status-key-item">
+              <span class="project-status active-status">Active</span>
+              <p>Project is currently part of my teaching or research activity.</p>
+            </div>
+
+            <div class="status-key-item">
+              <span class="project-status development-status">In Development</span>
+              <p>Project exists conceptually or privately but is not fully public yet.</p>
+            </div>
+
+            <div class="status-key-item">
+              <span class="project-status future-status">Future</span>
+              <p>Planned section or future archive.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="homepage-section callout-box" aria-labelledby="projects-contact-heading">
+          <h2 id="projects-contact-heading">Have a Question?</h2>
+
+          <p>
+            Students interested in using or contributing to these materials are welcome to contact
+            me. Some projects are appropriate for beginners, while others require more chemistry,
+            coding, or data analysis background.
+          </p>
+
+          <p>
+            Email:
+            <a href="mailto:waittc@trine.edu">waittc@trine.edu</a>
+          </p>
+        </section>
+
+      </section>
 
     </div>
-    <!-- .row -->
 
-  </div>
-  <!-- #wrapper .container -->
+  </main>
 
   <!-- Footer include -->
   <div id="page-footer"></div>
 
-  <!-- Back to top button -->
-  <a role="button" id="back-to-top" class="btn scroll-link" href="#top"><i class="fa fa-fw fa-2x fa-angle-up" aria-hidden="true"></i></a>
-
-  <div class="modal fade" id="modal-map-to-office" tabindex="-1" role="dialog" aria-labelledby="office-map-modal-label" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="office-map-modal-label">Map to my office</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img class="image-fluid dx-auto" src="img/map-to-my-office.png" alt="map to my office">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- jquery JS minified -->
+  <!-- jQuery JS minified -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-  <!-- jquery ui -->
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Popper minified -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 
-  <!-- Mustache.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
-
-  <!-- popper minified -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-  <!-- bootstrap JS minified -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS minified -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <!-- Main local scripts -->
   <script src="js/main.js"></script>
-  <script src="js/projects.js"></script>
 
   <script>
     $(function() {
-
-      // Load the top page navbar
       $("#page-navbar").load("page-navbar.html", function() {
-
         $("#me").removeClass("active");
+        $("#research").removeClass("active");
+        $("#teaching").removeClass("active");
         $("#projects").addClass("active");
-
       });
 
-
-      // Redirect to URL on data-url attr
-      $(document).on("click", "[data-url]", function() {
-        var url = $(this).data("url");
-        window.open(url);
-      });
-
+      $("#page-footer").load("page-footer.html");
     });
-    // document.ready
   </script>
 
 </body>

@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,107 +25,182 @@
   <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
 
-  <!-- jQuery UI css -->
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
-  <!-- Google font: Open Sans Pro -->
+  <!-- Google font: Open Sans -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- FontAwesome icon include -->
+  <!-- FontAwesome icons -->
   <script src="https://kit.fontawesome.com/b730292a05.js" crossorigin="anonymous"></script>
 
   <!-- Main local styles -->
   <link rel="stylesheet" href="css/main.css">
 
-  <title>Craig Waitt</title>
-
+  <title>Vitae | Craig Waitt, Ph.D.</title>
 </head>
 
 <body id="top">
 
-  <!-- navbar include -->
+  <!-- Navbar include -->
   <div id="page-navbar"></div>
 
-  <!-- main wrapper div -->
-  <div class="container" id="wrapper">
+  <main class="container min-vh-100" id="wrapper">
 
-    <div class="row mx-4">
-      <div class="col-sm-12">
+    <div class="row">
 
-        <h1 id="page-lead">Vitae</h1>
+      <!-- Sidebar -->
+      <aside class="col-sm-4 mb-4 mb-sm-0">
 
-        <p>Find my current curriculum vitae below. References available upon request.</p>
+        <div class="profile-card">
+          <div class="text-center">
+            <img id="my-photo"
+                 src="./img/personal_img/headshot.jpg"
+                 class="rounded img-fluid shadow-sm"
+                 width="100%"
+                 alt="Craig Waitt">
+          </div>
 
-        <div class="embed-responsive" style="height: 1250px;">
-          <object class="embed-responsive-item" data="./docs/CV.pdf"
-             type="application/pdf" internalinstanceid="9" title="">
-             <p>
-                Your browser isn't supporting embedded pdf files. You can download the file
-                <a href="
-             </p>
-          </object>https://drive.google.com/file/d/1Mn98zWF_WOSrLwDwQx8mLQdShiFM6Fus/view?usp=sharing">here</a>
-       </div>
+          <table class="table mt-4" id="contact-table">
+            <tbody>
+              <tr class="d-flex">
+                <td class="col-2 contact-icon">
+                  <i class="fa fa-fw fa-lg fa-home" aria-hidden="true"></i>
+                </td>
+                <td class="col-10">
+                  373 Best Hall<br>
+                  Trine University<br>
+                  Angola, IN 46703
+                </td>
+              </tr>
 
-      </div>
+              <tr class="d-flex">
+                <td class="col-2 contact-icon">
+                  <i class="fa fa-lg fa-at" aria-hidden="true"></i>
+                </td>
+                <td class="col-10">
+                  <a href="mailto:waittc@trine.edu">waittc@trine.edu</a>
+                </td>
+              </tr>
+
+              <tr class="d-flex">
+                <td class="col-2 contact-icon">
+                  <i class="fab fa-github fa-lg" aria-hidden="true"></i>
+                </td>
+                <td class="col-10">
+                  <a href="https://github.com/cwaitt" target="_blank" rel="noopener">GitHub</a>
+                </td>
+              </tr>
+
+              <tr class="d-flex">
+                <td class="col-2 contact-icon">
+                  <i class="fab fa-orcid fa-lg" aria-hidden="true"></i>
+                </td>
+                <td class="col-10">
+                  <a href="https://orcid.org/0000-0003-4189-4103" target="_blank" rel="noopener">ORCID</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </aside>
+
+      <!-- Main content -->
+      <section class="col-sm-8 px-4">
+
+        <header class="page-header">
+          <h1>Vitae</h1>
+
+          <p class="lead">
+            My current curriculum vitae is embedded below and available for download.
+          </p>
+
+          <p>
+            This document includes my academic appointments, education, teaching and mentoring
+            experience, research experience, publications, presentations, service, awards,
+            professional development, and technical skills.
+          </p>
+
+          <div class="vitae-button-row">
+            <a class="btn btn-primary" href="./docs/CV.pdf" target="_blank" rel="noopener">
+              <i class="fa fa-file-pdf mr-1" aria-hidden="true"></i>
+              Open CV
+            </a>
+
+            <a class="btn btn-outline-primary" href="./docs/CV.pdf" download>
+              <i class="fa fa-download mr-1" aria-hidden="true"></i>
+              Download CV
+            </a>
+          </div>
+        </header>
+
+        <section class="homepage-section" aria-labelledby="cv-preview-heading">
+          <h2 id="cv-preview-heading">CV Preview</h2>
+
+          <div class="vitae-embed-wrapper">
+            <object id="vitae-iframe"
+                    data="./docs/CV.pdf"
+                    type="application/pdf"
+                    width="100%"
+                    height="1000"
+                    aria-label="Embedded PDF of Craig Waitt's curriculum vitae">
+
+              <div class="pdf-fallback">
+                <p>
+                  Your browser does not support embedded PDF files.
+                  You can open or download the CV using the links below.
+                </p>
+
+                <p>
+                  <a class="btn btn-primary" href="./docs/CV.pdf" target="_blank" rel="noopener">
+                    Open CV
+                  </a>
+
+                  <a class="btn btn-outline-primary" href="./docs/CV.pdf" download>
+                    Download CV
+                  </a>
+                </p>
+              </div>
+
+            </object>
+          </div>
+        </section>
+
+      </section>
+
     </div>
 
-  </div>
-  <!-- #wrapper .container -->
+  </main>
 
   <!-- Footer include -->
   <div id="page-footer"></div>
 
-  <!-- Back to top button -->
-  <a role="button" id="back-to-top" class="btn scroll-link" href="#top"><i class="fa fa-fw fa-2x fa-angle-up" aria-hidden="true"></i></a>
-
-  <div class="modal fade" id="modal-map-to-office" tabindex="-1" role="dialog" aria-labelledby="office-map-modal-label" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="office-map-modal-label">Map to my office</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img class="image-fluid dx-auto" src="img/map-to-my-office.png" alt="map to my office">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- jquery JS minified -->
+  <!-- jQuery JS minified -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-  <!-- jquery ui -->
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Popper minified -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 
-  <!-- popper minified -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-  <!-- bootstrap JS minified -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS minified -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <!-- Main local scripts -->
   <script src="js/main.js"></script>
 
   <script>
     $(function() {
-
-      // Load the top page navbar
       $("#page-navbar").load("page-navbar.html", function() {
-
         $("#me").removeClass("active");
+        $("#research").removeClass("active");
+        $("#teaching").removeClass("active");
+        $("#projects").removeClass("active");
         $("#vitae").addClass("active");
-
       });
 
+      $("#page-footer").load("page-footer.html");
     });
-    // document.ready
   </script>
 
 </body>
